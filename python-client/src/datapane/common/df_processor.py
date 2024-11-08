@@ -23,11 +23,11 @@ def convert_axis(df: pd.DataFrame):
     # flatten/reset indexes
     if isinstance(df.index, pd.RangeIndex):
         pass  # allow RangeIndex - reset numbers?
-    elif isinstance(df.index, pd.Int64Index):
+    # elif isinstance(df.index, pd.Int64Index):
         df.reset_index(inplace=True, drop=True)
     else:
-        # reset if any other index type, e.g. MultiIndex, custom Index
-        # all new column dtypes will converted in latter functions
+    #     # reset if any other index type, e.g. MultiIndex, custom Index
+    #     # all new column dtypes will converted in latter functions
         df.reset_index(inplace=True)
 
 
